@@ -17,4 +17,5 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
 # end
 
 inflect.irregular 'pesquisador', 'pesquisadores'
+inflect.irregular 'administrador', 'administradores'
 end
