@@ -1,9 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nome: MyString
-  descricao: MyText
+  projeto_titulo: MyString
+  projeto_descricao: MyText
+  tematica_id: 
+  pesquisador_id: 
+  arquivo_id: 
 
 two:
-  nome: MyString
-  descricao: MyText
+  projeto_titulo: MyString
+  projeto_descricao: MyText
+  tematica_id: 
+  pesquisador_id: 
+  arquivo_id: 

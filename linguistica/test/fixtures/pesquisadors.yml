@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nome: MyString
-  cnpq: MyString
-  email: MyString
-  foto_id: 
+  pesquisador_nome: MyString
+  pesquisador_cnpq: MyString
+  pesquisador_contato: MyString
+  arquivo_id: 
 
 two:
-  nome: MyString
-  cnpq: MyString
-  email: MyString
-  foto_id: 
+  pesquisador_nome: MyString
+  pesquisador_cnpq: MyString
+  pesquisador_contato: MyString
+  arquivo_id: 

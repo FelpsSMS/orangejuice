@@ -1,3 +1,3 @@
 class Pesquisador < ActiveRecord::Base
-  belongs_to :foto
+  belongs_to :arquivo
 end
