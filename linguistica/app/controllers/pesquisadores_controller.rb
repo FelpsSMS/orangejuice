@@ -1,18 +1,15 @@
 class PesquisadoresController < ApplicationController
-
- def list
-   end
-   def show
-   end
-   def new
-   end
-   def create
-   end
-   def edit
-   end
-   def update
-   end
-   def delete
-   end
-
+  
+  def index
+  
+	@pesquisadores = Pesquisador.all
+  
+  end
+  
+  def create
+  
+	@pesquisador = Pesquisador.new(params[:pesquisador])
+  
+  end
+  
 end
