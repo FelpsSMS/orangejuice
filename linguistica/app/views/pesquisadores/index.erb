@@ -1,0 +1,75 @@
+<!-------------- PESQUISADORES -------------->
+<meta charset="UTF-8">
+<!-- IF LOGO <img src='http://infojovem.org.br/wp-content/uploads/2010/10/IFRS-Fotografia-ok.jpg'/> -->
+
+<!-- ------------------------- NAVBAR ------------------------- -->
+<div> 
+
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img height='50px' width='50px' src='http://img1.wikia.nocookie.net/__cb20121205002841/leagueoflegends/images/a/ab/BrandSquare.png'></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+	  
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Projetos</a></li>
+        <li><a href="/tematicas">Tematicas</a></li>
+        <li class='active'><a href="#">Pesquisadores</a></li>
+        <li><a href="/fotos">Fotos</a></li>
+		
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+		
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+</div> <!-- ------------------------- NAVBAR END ------------------------- -->
+
+<h1 align='center'>Pesquisadores</h1><br>
+<% @pesquisadores.each do |p| %>
+<div class="jumbotron">
+
+<div style='float:left;margin-left:50px;width:250px;height:250px'> 
+<img width='200px' height='200px' src='<%= p.pesquisador_cnpq %>'>
+<!--<img width='200px' height='200px'
+src='http://31.222.77.18/845/8/0/9/1232178826/1452337/t1367024789/c_W91JTXIKoYHO9m1k86W3SkVON8QnlFaUBN3iZKvcX4c/1452358_300.jpg'>
+-->
+</div>
+
+<div style='margin-left:100px'>
+
+<br>
+<p><b>Nome:</b> <%= p.pesquisador_nome %></p>
+<p><b>CNPq:</b> Não Tem </p>
+<p><b>Contato:</b> <%= p.pesquisador_contato %></p>
+
+<br><br><br>
+</div>
+
+
+</div>
+<% end %>
