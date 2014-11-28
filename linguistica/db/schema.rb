@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140925225038) do
 
-  create_table "administradors", force: true do |t|
+  create_table "administradores", force: true do |t|
     t.string   "administrador_nome"
     t.string   "administrador_email"
     t.string   "administrador_login"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140925225038) do
     t.datetime "updated_at"
   end
 
-  add_index "administradors", ["arquivo_id"], name: "index_administradors_on_arquivo_id"
+  add_index "administradores", ["arquivo_id"], name: "index_administradores_on_arquivo_id"
 
   create_table "arquivo_tipos", force: true do |t|
     t.string   "arquivo_tipo_descricao"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20140925225038) do
 
   add_index "arquivos", ["arquivo_tipo_id"], name: "index_arquivos_on_arquivo_tipo_id"
 
-  create_table "pesquisadors", force: true do |t|
+  create_table "pesquisadores", force: true do |t|
     t.string   "pesquisador_nome"
     t.string   "pesquisador_cnpq"
     t.string   "pesquisador_contato"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20140925225038) do
     t.datetime "updated_at"
   end
 
-  add_index "pesquisadors", ["arquivo_id"], name: "index_pesquisadors_on_arquivo_id"
+  add_index "pesquisadores", ["arquivo_id"], name: "index_pesquisadores_on_arquivo_id"
 
   create_table "projetos", force: true do |t|
     t.string   "projeto_titulo"
