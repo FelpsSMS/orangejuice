@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pesquisador nome:</strong>
+  <%= @pesquisador.pesquisador_nome %>
+</p>
+
+<p>
+  <strong>Pesquisador cnpq:</strong>
+  <%= @pesquisador.pesquisador_cnpq %>
+</p>
+
+<p>
+  <strong>Pesquisador contato:</strong>
+  <%= @pesquisador.pesquisador_contato %>
+</p>
+
+<p>
+<%= image_tag @pesquisador.foto.url(:small) %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_pesquisador_path(@pesquisador) %> |
+<%= link_to 'Back', pesquisadores_path %>
