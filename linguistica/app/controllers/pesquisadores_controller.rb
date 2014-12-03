@@ -59,11 +59,9 @@ class PesquisadoresController < ApplicationController
   # DELETE /pesquisadores/1
   # DELETE /pesquisadores/1.json
   def destroy
+    @pesquisador = Pesquisador.find params[:id]
     @pesquisador.destroy
-    respond_to do |format|
-      format.html { redirect_to pesquisadores_url, notice: 'Pesquisador was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+	redirect_to action: 'show'
   end
 
   private
