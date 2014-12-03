@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140925225038) do
+ActiveRecord::Schema.define(version: 20141201002332) do
 
   create_table "administradores", force: true do |t|
     t.string   "administrador_nome"
@@ -48,6 +48,9 @@ ActiveRecord::Schema.define(version: 20140925225038) do
     t.integer  "arquivo_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
   end
 
   add_index "pesquisadores", ["arquivo_id"], name: "index_pesquisadores_on_arquivo_id"
