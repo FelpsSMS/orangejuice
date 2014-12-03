@@ -1,0 +1,39 @@
+<%= simple_form_for(@tematica) do |f| %>
+  <% if @tematica.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tematica.errors.count, "error") %> prohibited this tematica from being saved:</h2>
+
+      <ul>
+      <% @tematica.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- ------------------------------------------------------------------------------------ -->
+  
+  <div class="panel panel-default" style='width:70%;margin-left:auto;margin-right:auto'>
+  <div class="panel-body">
+   
+	<br>
+	<div style='width:70%;margin-left:auto;margin-right:auto'>
+	 <%= f.input :tematica_titulo, label: "Titulo", :placeholder => "Digite o titulo da tematica aqui" %>
+	 </div>
+	<br>
+	<div style='width:70%;margin-left:auto;margin-right:auto'>
+	 <%= f.input :tematica_descricao, label: "Descrição", as: :text, :placeholder => "Digite a descrição da tematica aqui"%>
+	 </div>
+	<br>
+	<div style='width:70%;margin-left:auto;margin-right:auto'>
+	 <%= f.button :submit,"Criar Tematica", class: "my-button" %>
+	 </div>
+	
+  </div>
+</div>
+  
+  
+  <br><br><br><br><br><br>
+  
+  
+<% end %>

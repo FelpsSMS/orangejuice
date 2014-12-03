@@ -1,0 +1,10 @@
+<h1 align='center'>Temáticas</h1><br>
+
+
+<% @tematicas.each do |tematica| %>
+<div class="jumbotron">
+  <h1 align='center'><small><%= tematica.tematica_titulo %></small></h1>
+  <p align='center'><%= tematica.tematica_descricao %></p>
+  </div>
+<% end %>
+
