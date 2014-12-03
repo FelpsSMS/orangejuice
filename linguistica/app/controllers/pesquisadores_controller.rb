@@ -1,5 +1,5 @@
 class PesquisadoresController < ApplicationController
-  before_action :set_pesquisador, only: [:show, :edit, :update, :destroy, :foto]
+  before_action :set_pesquisador, only: [:edit, :update, :destroy]
 
   
 
@@ -12,6 +12,9 @@ class PesquisadoresController < ApplicationController
   # GET /pesquisadores/1
   # GET /pesquisadores/1.json
   def show
+  
+	@pesquisadores = Pesquisador.all
+  
   end
 
   # GET /pesquisadores/new
