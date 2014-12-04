@@ -1,17 +1,36 @@
-<%= simple_form_for(@projeto) do |f| %>
+<%= simple_form_for(@projeto, :html => { :multipart => true }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="panel panel-default" style='width:70%;margin-left:auto;margin-right:auto'>
+  <div class="panel-body">
 
-    <%= f.input :projeto_titulo %>
-
-    <%= f.input :projeto_descricao %>
-
-    <%= f.association :pesquisador %>
-
+	<br>
+	<div style='width:70%;margin-left:auto;margin-right:auto'>
+		<%= f.input :projeto_titulo, label: "Titulo", :placeholder => "Digite o titulo do projeto aqui" %>
+	</div>
+  <br>
+  
+  <div style='width:70%;margin-left:auto;margin-right:auto'>
+		<%= f.input :projeto_descricao, as: :text, label: "Descrição", :placeholder => "Digite a descrição do projeto aqui" %>
+	</div>
+  <br>
+  
+  <div style='width:70%;margin-left:auto;margin-right:auto'>
+		<%= f.association :pesquisador, label_method: :pesquisador_nome, value_method: :id, include_blank: false, prompt: "Escolha um pesquisador responsável" %>
+	</div>
+  <br>
+  
+	<div style='width:70%;margin-left:auto;margin-right:auto'>
+		 <%= f.hint "Selecione a foto do projeto" %>
+		 <%= f.file_field :foto %>
+	</div>
+  <br>
+  
+ <div style='width:70%;margin-left:auto;margin-right:auto'>
+	 <%= f.button :submit,"Criar Projeto", class: "my-button" %>
+	</div>
+  
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
   </div>
+  
 <% end %>
