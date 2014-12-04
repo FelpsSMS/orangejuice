@@ -1,19 +1,32 @@
-<p id="notice"><%= notice %></p>
+<h1>Projetos</h1>
 
-<p>
-  <strong>Projeto titulo:</strong>
-  <%= @projeto.projeto_titulo %>
-</p>
+<br>
 
-<p>
-  <strong>Projeto descricao:</strong>
-  <%= @projeto.projeto_descricao %>
-</p>
+<% @projetos.each do |p| %>
+<div class="jumbotron">
 
-<p>
-  <strong>Pesquisador:</strong>
-  <%= @projeto.pesquisador %>
-</p>
+<div style='float:left;margin-left:50px;width:200px;height:250px'> 
 
-<%= link_to 'Edit', edit_projeto_path(@projeto) %> |
-<%= link_to 'Back', projetos_path %>
+<%= image_tag( p.foto.url, height: '300', width: '500') %>
+
+</div>
+
+<div style='margin-left:50px'>
+
+
+
+<p><b>Titulo:</b> <%= p.projeto_titulo %></p>
+<p><b>Pesquisador:</b> <%= p.pesquisador.pesquisador_nome %> </p>
+<p><b>Descrição:</b> <%= p.projeto_descricao %></p>
+<p><small>Opções: <%= link_to "Editar" , :action => "edit", :id => p.id %> | <%= link_to "Excluir", p, data: { confirm: "Você realmente quer deletar esse projeto?" }, :method => :delete %> </small> </p>
+
+
+
+
+<br><br><br>
+</div>
+
+
+</div>
+<% end %>
+
