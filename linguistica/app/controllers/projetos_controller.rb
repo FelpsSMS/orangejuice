@@ -1,5 +1,5 @@
 class ProjetosController < ApplicationController
-  before_action :set_projeto, only: [:show, :edit, :update, :destroy]
+  before_action :set_projeto, only: [:edit, :update, :destroy]
 
   # GET /projetos
   # GET /projetos.json
@@ -10,6 +10,9 @@ class ProjetosController < ApplicationController
   # GET /projetos/1
   # GET /projetos/1.json
   def show
+  
+  @projetos = Projeto.all
+  
   end
 
   # GET /projetos/new
@@ -69,6 +72,6 @@ class ProjetosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def projeto_params
-      params.require(:projeto).permit(:projeto_titulo, :projeto_descricao, :pesquisador_id)
+      params.require(:projeto).permit(:projeto_titulo, :projeto_descricao, :pesquisador_id, :foto)
     end
 end
