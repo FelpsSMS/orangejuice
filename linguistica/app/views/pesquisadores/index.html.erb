@@ -1,29 +1,30 @@
-<h1>Listing pesquisadores</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Pesquisador nome</th>
-      <th>Pesquisador cnpq</th>
-      <th>Pesquisador contato</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pesquisadores.each do |pesquisador| %>
-      <tr>
-        <td><%= pesquisador.pesquisador_nome %></td>
-        <td><%= pesquisador.pesquisador_cnpq %></td>
-        <td><%= pesquisador.pesquisador_contato %></td>
-        <td><%= link_to 'Show', pesquisador %></td>
-        <td><%= link_to 'Edit', edit_pesquisador_path(pesquisador) %></td>
-        <td><%= link_to 'Destroy', pesquisador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1 align='center'>Pesquisadores</h1>
 
 <br>
 
-<%= link_to 'New Pesquisador', new_pesquisador_path %>
+<% @pesquisadores.each do |p| %>
+<div class="jumbotron">
+
+
+<div style='float:left;margin-left:50px;width:200px;height:200px'> 
+
+<%= image_tag p.foto.url(:small) %>
+
+</div>
+
+<div style='margin-left:100px'>
+
+<br>
+<p><b>Nome:</b> <%= p.pesquisador_nome %></p>
+<p><b>CNPq:</b> <%= p.pesquisador_cnpq %> </p>
+<p><b>Contato:</b> <%= p.pesquisador_contato %></p>
+
+
+
+
+<br><br><br>
+</div>
+
+
+</div>
+<% end %>
