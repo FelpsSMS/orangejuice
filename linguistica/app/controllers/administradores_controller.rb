@@ -1,5 +1,7 @@
 class AdministradoresController < ApplicationController
   
+  layout 'admin'
+  
   def index
   
 	@administradores = Administrador.all
@@ -19,7 +21,9 @@ class AdministradoresController < ApplicationController
 	@administrador = Administrador.new
   
   end
-  
-  
+
+def index
+	render layout: 'admin'
+end
   
 end
