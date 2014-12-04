@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+	get 'login' => 'login#index', as: :login_form
+	post 'login/login', as: :login
+	post 'login/logout', as: :logout
+	
+
 	root 'home#index'
 	
 	resources :pesquisadores

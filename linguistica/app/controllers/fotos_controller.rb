@@ -1,7 +1,6 @@
 class FotosController < ApplicationController
   
   def index
-	render layout: 'default'
 	@fotos = Foto.all
 	
   

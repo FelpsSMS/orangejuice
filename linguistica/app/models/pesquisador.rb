@@ -13,8 +13,8 @@ has_attached_file :foto, :styles => { :small => "150x150>" },
 
   # Explicitly do not validate
   #do_not_validate_attachment_file_type :foto
-
-
-
+  
+  #--------------------------------------------------------------------------------------------------------
+  
 
 end
