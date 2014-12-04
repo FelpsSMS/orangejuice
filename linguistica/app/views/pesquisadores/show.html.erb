@@ -1,25 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Pesquisador nome:</strong>
-  <%= @pesquisador.pesquisador_nome %>
-</p>
+<h1 align='center'>Lista de Pesquisadores</h1>
 
-<p>
-  <strong>Pesquisador cnpq:</strong>
-  <%= @pesquisador.pesquisador_cnpq %>
-</p>
+<br>
 
-<p>
-  <strong>Pesquisador contato:</strong>
-  <%= @pesquisador.pesquisador_contato %>
-</p>
 
-<p>
-<%= image_tag @pesquisador.foto.url(:small) %>
-</p>
+<% @pesquisadores.each do |p| %>
+<div class="jumbotron">
+
+<div style='float:left;margin-left:50px;width:200px;height:200px'> 
+
+<%= image_tag p.foto.url(:small) %>
+
+</div>
+
+<div style='margin-left:100px'>
 
 
 
-<%= link_to 'Edit', edit_pesquisador_path(@pesquisador) %> |
-<%= link_to 'Back', pesquisadores_path %>
+<p><b>Nome:</b> <%= p.pesquisador_nome %></p>
+<p><b>CNPq:</b> <%= p.pesquisador_cnpq %> </p>
+<p><b>Contato:</b> <%= p.pesquisador_contato %></p>
+<p><small>Opções: <%= link_to "Editar" , :action => "edit", :id => p.id %> | <%= link_to "Excluir", p, data: { confirm: "Você realmente quer deletar esse pesquisador?" }, :method => :delete %> </small> </p>
+
+
+
+<br><br><br>
+</div>
+
+
+</div>
+<% end %>
+
